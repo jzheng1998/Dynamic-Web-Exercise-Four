@@ -21,7 +21,6 @@ router.get("/", (req, res) => {
       return res.send(blogpostsArray);
     })
     .catch((error) => {
-      console.warn("error: ", error);
       return res.send(error);
     });
 });
