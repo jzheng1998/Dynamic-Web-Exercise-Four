@@ -5,6 +5,11 @@ const port = process.env.PORT || 4000;
 // Routes Import
 const indexRoute = require("./routes/index.js");
 
+const firebase = require("firebase");
+const firebaseConfig = require("./firebase");
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 // Routing in Express
 app.use("/", indexRoute);
 
