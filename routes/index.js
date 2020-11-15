@@ -15,7 +15,6 @@ router.get("/", (req, res) => {
   blogposts
     .get()
     .then((querySnapshot) => {
-      console.log("querySnapshot: ", querySnapshot);
       querySnapshot.forEach((doc) => {
         blogpostsArray.push(doc.data());
       });
