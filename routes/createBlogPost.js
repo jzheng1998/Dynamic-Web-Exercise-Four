@@ -28,10 +28,10 @@ router.get("/submit", (req, res) => {
     .doc(idFromTitle)
     .set(queryParams)
     .then((doc) => {
-      res.send("Successful Submission.");
+      return res.send("Successful Submission.");
     })
     .catch((error) => {
-      res.send("Failed Submission.");
+      return res.send("Failed Submission.");
     });
 });
 
